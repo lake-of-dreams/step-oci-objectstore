@@ -196,5 +196,12 @@ main() {
   esac
   cleanup
 }
-
+export OCI_CLI_VERSION="2.4.19"
+pip install pyinstaller==3.3.1
+pip install oci-cli==${OCI_CLI_VERSION}
+mkdir -p /tmp/ocicli
+cp $(which oci) /tmp/ocicli
+cd /tmp/ocicli
+pyinstaller -F /tmp/ocicli/oci
+mv /tmp/ocicli/dist/oci $WERCKER_STEP_ROOT/oci
 main
