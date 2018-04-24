@@ -196,6 +196,8 @@ main() {
   esac
   cleanup
 }
+apt-get install python3
+apt-get install pip
 export OCI_CLI_VERSION="2.4.19"
 pip install pyinstaller==3.3.1
 pip install oci-cli==${OCI_CLI_VERSION}
