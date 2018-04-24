@@ -24,7 +24,7 @@ set_auth() {
   chmod 600 $key_file
   chmod 600 $CONFIG_FILE
   debug "generated OCI config file"
-  debug "${cat $CONFIG_FILE}"
+  debug "$(cat $CONFIG_FILE)"
 }
 
 validate_oci_flags() {
