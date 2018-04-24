@@ -196,10 +196,6 @@ main() {
   esac
   cleanup
 }
-apt-get -y install python3
-apt-get -y install python-pip python-dev build-essential
-pip install --upgrade pip
-pip install --upgrade virtualenv
 export OCI_CLI_VERSION="2.4.19"
 pip install pyinstaller==3.3.1
 pip install oci-cli==${OCI_CLI_VERSION}
